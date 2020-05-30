@@ -2,7 +2,7 @@ syntax = "proto2";
 
 package tutorial;
 
-message HelloWorld {
+message TextMessage {
     required int32 id = 1;
     optional double DoubleId = 2; 
     optional string TITLE = 3;
@@ -27,5 +27,9 @@ message HelloWorld {
         optional string subtext =3;
   }
   repeated SubMessage dummy = 9;
+}
+
+message HelloWorld {
+    repeated TextMessage msg = 1;
 }
 

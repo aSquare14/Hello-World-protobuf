@@ -48,7 +48,7 @@ struct TableStruct_helloworld_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -59,62 +59,66 @@ namespace tutorial {
 class HelloWorld;
 class HelloWorldDefaultTypeInternal;
 extern HelloWorldDefaultTypeInternal _HelloWorld_default_instance_;
-class HelloWorld_Result;
-class HelloWorld_ResultDefaultTypeInternal;
-extern HelloWorld_ResultDefaultTypeInternal _HelloWorld_Result_default_instance_;
-class HelloWorld_SubMessage;
-class HelloWorld_SubMessageDefaultTypeInternal;
-extern HelloWorld_SubMessageDefaultTypeInternal _HelloWorld_SubMessage_default_instance_;
+class TextMessage;
+class TextMessageDefaultTypeInternal;
+extern TextMessageDefaultTypeInternal _TextMessage_default_instance_;
+class TextMessage_Result;
+class TextMessage_ResultDefaultTypeInternal;
+extern TextMessage_ResultDefaultTypeInternal _TextMessage_Result_default_instance_;
+class TextMessage_SubMessage;
+class TextMessage_SubMessageDefaultTypeInternal;
+extern TextMessage_SubMessageDefaultTypeInternal _TextMessage_SubMessage_default_instance_;
 }  // namespace tutorial
 PROTOBUF_NAMESPACE_OPEN
 template<> ::tutorial::HelloWorld* Arena::CreateMaybeMessage<::tutorial::HelloWorld>(Arena*);
-template<> ::tutorial::HelloWorld_Result* Arena::CreateMaybeMessage<::tutorial::HelloWorld_Result>(Arena*);
-template<> ::tutorial::HelloWorld_SubMessage* Arena::CreateMaybeMessage<::tutorial::HelloWorld_SubMessage>(Arena*);
+template<> ::tutorial::TextMessage* Arena::CreateMaybeMessage<::tutorial::TextMessage>(Arena*);
+template<> ::tutorial::TextMessage_Result* Arena::CreateMaybeMessage<::tutorial::TextMessage_Result>(Arena*);
+template<> ::tutorial::TextMessage_SubMessage* Arena::CreateMaybeMessage<::tutorial::TextMessage_SubMessage>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace tutorial {
 
-enum HelloWorld_MessageType : int {
-  HelloWorld_MessageType_URGENT = 0,
-  HelloWorld_MessageType_NORMAL = 1
+enum TextMessage_MessageType : int {
+  TextMessage_MessageType_URGENT = 0,
+  TextMessage_MessageType_NORMAL = 1
 };
-bool HelloWorld_MessageType_IsValid(int value);
-constexpr HelloWorld_MessageType HelloWorld_MessageType_MessageType_MIN = HelloWorld_MessageType_URGENT;
-constexpr HelloWorld_MessageType HelloWorld_MessageType_MessageType_MAX = HelloWorld_MessageType_NORMAL;
-constexpr int HelloWorld_MessageType_MessageType_ARRAYSIZE = HelloWorld_MessageType_MessageType_MAX + 1;
+bool TextMessage_MessageType_IsValid(int value);
+constexpr TextMessage_MessageType TextMessage_MessageType_MessageType_MIN = TextMessage_MessageType_URGENT;
+constexpr TextMessage_MessageType TextMessage_MessageType_MessageType_MAX = TextMessage_MessageType_NORMAL;
+constexpr int TextMessage_MessageType_MessageType_ARRAYSIZE = TextMessage_MessageType_MessageType_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* HelloWorld_MessageType_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* TextMessage_MessageType_descriptor();
 template<typename T>
-inline const std::string& HelloWorld_MessageType_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, HelloWorld_MessageType>::value ||
+inline const std::string& TextMessage_MessageType_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, TextMessage_MessageType>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function HelloWorld_MessageType_Name.");
+    "Incorrect type passed to function TextMessage_MessageType_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    HelloWorld_MessageType_descriptor(), enum_t_value);
+    TextMessage_MessageType_descriptor(), enum_t_value);
 }
-inline bool HelloWorld_MessageType_Parse(
-    const std::string& name, HelloWorld_MessageType* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<HelloWorld_MessageType>(
-    HelloWorld_MessageType_descriptor(), name, value);
+inline bool TextMessage_MessageType_Parse(
+    const std::string& name, TextMessage_MessageType* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<TextMessage_MessageType>(
+    TextMessage_MessageType_descriptor(), name, value);
 }
 // ===================================================================
 
-class HelloWorld_Result PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.HelloWorld.Result) */ {
+class TextMessage_Result PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.TextMessage.Result) */ {
  public:
-  inline HelloWorld_Result() : HelloWorld_Result(nullptr) {};
-  virtual ~HelloWorld_Result();
+  inline TextMessage_Result() : TextMessage_Result(nullptr) {};
+  virtual ~TextMessage_Result();
 
-  HelloWorld_Result(const HelloWorld_Result& from);
-  HelloWorld_Result(HelloWorld_Result&& from) noexcept
-    : HelloWorld_Result() {
+  TextMessage_Result(const TextMessage_Result& from);
+  TextMessage_Result(TextMessage_Result&& from) noexcept
+    : TextMessage_Result() {
     *this = ::std::move(from);
   }
 
-  inline HelloWorld_Result& operator=(const HelloWorld_Result& from) {
+  inline TextMessage_Result& operator=(const TextMessage_Result& from) {
     CopyFrom(from);
     return *this;
   }
-  inline HelloWorld_Result& operator=(HelloWorld_Result&& from) noexcept {
+  inline TextMessage_Result& operator=(TextMessage_Result&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -139,20 +143,20 @@ class HelloWorld_Result PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const HelloWorld_Result& default_instance();
+  static const TextMessage_Result& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const HelloWorld_Result* internal_default_instance() {
-    return reinterpret_cast<const HelloWorld_Result*>(
-               &_HelloWorld_Result_default_instance_);
+  static inline const TextMessage_Result* internal_default_instance() {
+    return reinterpret_cast<const TextMessage_Result*>(
+               &_TextMessage_Result_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(HelloWorld_Result& a, HelloWorld_Result& b) {
+  friend void swap(TextMessage_Result& a, TextMessage_Result& b) {
     a.Swap(&b);
   }
-  inline void Swap(HelloWorld_Result* other) {
+  inline void Swap(TextMessage_Result* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -160,7 +164,7 @@ class HelloWorld_Result PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(HelloWorld_Result* other) {
+  void UnsafeArenaSwap(TextMessage_Result* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -168,17 +172,17 @@ class HelloWorld_Result PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline HelloWorld_Result* New() const final {
-    return CreateMaybeMessage<HelloWorld_Result>(nullptr);
+  inline TextMessage_Result* New() const final {
+    return CreateMaybeMessage<TextMessage_Result>(nullptr);
   }
 
-  HelloWorld_Result* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<HelloWorld_Result>(arena);
+  TextMessage_Result* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TextMessage_Result>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const HelloWorld_Result& from);
-  void MergeFrom(const HelloWorld_Result& from);
+  void CopyFrom(const TextMessage_Result& from);
+  void MergeFrom(const TextMessage_Result& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -192,13 +196,13 @@ class HelloWorld_Result PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(HelloWorld_Result* other);
+  void InternalSwap(TextMessage_Result* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "tutorial.HelloWorld.Result";
+    return "tutorial.TextMessage.Result";
   }
   protected:
-  explicit HelloWorld_Result(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit TextMessage_Result(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -279,7 +283,7 @@ class HelloWorld_Result PROTOBUF_FINAL :
   std::string* _internal_mutable_email();
   public:
 
-  // @@protoc_insertion_point(class_scope:tutorial.HelloWorld.Result)
+  // @@protoc_insertion_point(class_scope:tutorial.TextMessage.Result)
  private:
   class _Internal;
 
@@ -294,23 +298,23 @@ class HelloWorld_Result PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class HelloWorld_SubMessage PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.HelloWorld.SubMessage) */ {
+class TextMessage_SubMessage PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.TextMessage.SubMessage) */ {
  public:
-  inline HelloWorld_SubMessage() : HelloWorld_SubMessage(nullptr) {};
-  virtual ~HelloWorld_SubMessage();
+  inline TextMessage_SubMessage() : TextMessage_SubMessage(nullptr) {};
+  virtual ~TextMessage_SubMessage();
 
-  HelloWorld_SubMessage(const HelloWorld_SubMessage& from);
-  HelloWorld_SubMessage(HelloWorld_SubMessage&& from) noexcept
-    : HelloWorld_SubMessage() {
+  TextMessage_SubMessage(const TextMessage_SubMessage& from);
+  TextMessage_SubMessage(TextMessage_SubMessage&& from) noexcept
+    : TextMessage_SubMessage() {
     *this = ::std::move(from);
   }
 
-  inline HelloWorld_SubMessage& operator=(const HelloWorld_SubMessage& from) {
+  inline TextMessage_SubMessage& operator=(const TextMessage_SubMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline HelloWorld_SubMessage& operator=(HelloWorld_SubMessage&& from) noexcept {
+  inline TextMessage_SubMessage& operator=(TextMessage_SubMessage&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -335,20 +339,20 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const HelloWorld_SubMessage& default_instance();
+  static const TextMessage_SubMessage& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const HelloWorld_SubMessage* internal_default_instance() {
-    return reinterpret_cast<const HelloWorld_SubMessage*>(
-               &_HelloWorld_SubMessage_default_instance_);
+  static inline const TextMessage_SubMessage* internal_default_instance() {
+    return reinterpret_cast<const TextMessage_SubMessage*>(
+               &_TextMessage_SubMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(HelloWorld_SubMessage& a, HelloWorld_SubMessage& b) {
+  friend void swap(TextMessage_SubMessage& a, TextMessage_SubMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(HelloWorld_SubMessage* other) {
+  inline void Swap(TextMessage_SubMessage* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -356,7 +360,7 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(HelloWorld_SubMessage* other) {
+  void UnsafeArenaSwap(TextMessage_SubMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -364,17 +368,17 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline HelloWorld_SubMessage* New() const final {
-    return CreateMaybeMessage<HelloWorld_SubMessage>(nullptr);
+  inline TextMessage_SubMessage* New() const final {
+    return CreateMaybeMessage<TextMessage_SubMessage>(nullptr);
   }
 
-  HelloWorld_SubMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<HelloWorld_SubMessage>(arena);
+  TextMessage_SubMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TextMessage_SubMessage>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const HelloWorld_SubMessage& from);
-  void MergeFrom(const HelloWorld_SubMessage& from);
+  void CopyFrom(const TextMessage_SubMessage& from);
+  void MergeFrom(const TextMessage_SubMessage& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -388,13 +392,13 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(HelloWorld_SubMessage* other);
+  void InternalSwap(TextMessage_SubMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "tutorial.HelloWorld.SubMessage";
+    return "tutorial.TextMessage.SubMessage";
   }
   protected:
-  explicit HelloWorld_SubMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit TextMessage_SubMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -473,7 +477,7 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
   void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:tutorial.HelloWorld.SubMessage)
+  // @@protoc_insertion_point(class_scope:tutorial.TextMessage.SubMessage)
  private:
   class _Internal;
 
@@ -489,23 +493,23 @@ class HelloWorld_SubMessage PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class HelloWorld PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.HelloWorld) */ {
+class TextMessage PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.TextMessage) */ {
  public:
-  inline HelloWorld() : HelloWorld(nullptr) {};
-  virtual ~HelloWorld();
+  inline TextMessage() : TextMessage(nullptr) {};
+  virtual ~TextMessage();
 
-  HelloWorld(const HelloWorld& from);
-  HelloWorld(HelloWorld&& from) noexcept
-    : HelloWorld() {
+  TextMessage(const TextMessage& from);
+  TextMessage(TextMessage&& from) noexcept
+    : TextMessage() {
     *this = ::std::move(from);
   }
 
-  inline HelloWorld& operator=(const HelloWorld& from) {
+  inline TextMessage& operator=(const TextMessage& from) {
     CopyFrom(from);
     return *this;
   }
-  inline HelloWorld& operator=(HelloWorld&& from) noexcept {
+  inline TextMessage& operator=(TextMessage&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -530,7 +534,7 @@ class HelloWorld PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const HelloWorld& default_instance();
+  static const TextMessage& default_instance();
 
   enum TestOneofCase {
     kTestA = 7,
@@ -539,17 +543,17 @@ class HelloWorld PROTOBUF_FINAL :
   };
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const HelloWorld* internal_default_instance() {
-    return reinterpret_cast<const HelloWorld*>(
-               &_HelloWorld_default_instance_);
+  static inline const TextMessage* internal_default_instance() {
+    return reinterpret_cast<const TextMessage*>(
+               &_TextMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(HelloWorld& a, HelloWorld& b) {
+  friend void swap(TextMessage& a, TextMessage& b) {
     a.Swap(&b);
   }
-  inline void Swap(HelloWorld* other) {
+  inline void Swap(TextMessage* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -557,7 +561,7 @@ class HelloWorld PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(HelloWorld* other) {
+  void UnsafeArenaSwap(TextMessage* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -565,17 +569,17 @@ class HelloWorld PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline HelloWorld* New() const final {
-    return CreateMaybeMessage<HelloWorld>(nullptr);
+  inline TextMessage* New() const final {
+    return CreateMaybeMessage<TextMessage>(nullptr);
   }
 
-  HelloWorld* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<HelloWorld>(arena);
+  TextMessage* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TextMessage>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const HelloWorld& from);
-  void MergeFrom(const HelloWorld& from);
+  void CopyFrom(const TextMessage& from);
+  void MergeFrom(const TextMessage& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -589,13 +593,13 @@ class HelloWorld PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(HelloWorld* other);
+  void InternalSwap(TextMessage* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "tutorial.HelloWorld";
+    return "tutorial.TextMessage";
   }
   protected:
-  explicit HelloWorld(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit TextMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -612,37 +616,37 @@ class HelloWorld PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-  typedef HelloWorld_Result Result;
-  typedef HelloWorld_SubMessage SubMessage;
+  typedef TextMessage_Result Result;
+  typedef TextMessage_SubMessage SubMessage;
 
-  typedef HelloWorld_MessageType MessageType;
+  typedef TextMessage_MessageType MessageType;
   static constexpr MessageType URGENT =
-    HelloWorld_MessageType_URGENT;
+    TextMessage_MessageType_URGENT;
   static constexpr MessageType NORMAL =
-    HelloWorld_MessageType_NORMAL;
+    TextMessage_MessageType_NORMAL;
   static inline bool MessageType_IsValid(int value) {
-    return HelloWorld_MessageType_IsValid(value);
+    return TextMessage_MessageType_IsValid(value);
   }
   static constexpr MessageType MessageType_MIN =
-    HelloWorld_MessageType_MessageType_MIN;
+    TextMessage_MessageType_MessageType_MIN;
   static constexpr MessageType MessageType_MAX =
-    HelloWorld_MessageType_MessageType_MAX;
+    TextMessage_MessageType_MessageType_MAX;
   static constexpr int MessageType_ARRAYSIZE =
-    HelloWorld_MessageType_MessageType_ARRAYSIZE;
+    TextMessage_MessageType_MessageType_ARRAYSIZE;
   static inline const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor*
   MessageType_descriptor() {
-    return HelloWorld_MessageType_descriptor();
+    return TextMessage_MessageType_descriptor();
   }
   template<typename T>
   static inline const std::string& MessageType_Name(T enum_t_value) {
     static_assert(::std::is_same<T, MessageType>::value ||
       ::std::is_integral<T>::value,
       "Incorrect type passed to function MessageType_Name.");
-    return HelloWorld_MessageType_Name(enum_t_value);
+    return TextMessage_MessageType_Name(enum_t_value);
   }
   static inline bool MessageType_Parse(const std::string& name,
       MessageType* value) {
-    return HelloWorld_MessageType_Parse(name, value);
+    return TextMessage_MessageType_Parse(name, value);
   }
 
   // accessors -------------------------------------------------------
@@ -662,34 +666,34 @@ class HelloWorld PROTOBUF_FINAL :
   int _internal_result_size() const;
   public:
   void clear_result();
-  ::tutorial::HelloWorld_Result* mutable_result(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_Result >*
+  ::tutorial::TextMessage_Result* mutable_result(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_Result >*
       mutable_result();
   private:
-  const ::tutorial::HelloWorld_Result& _internal_result(int index) const;
-  ::tutorial::HelloWorld_Result* _internal_add_result();
+  const ::tutorial::TextMessage_Result& _internal_result(int index) const;
+  ::tutorial::TextMessage_Result* _internal_add_result();
   public:
-  const ::tutorial::HelloWorld_Result& result(int index) const;
-  ::tutorial::HelloWorld_Result* add_result();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_Result >&
+  const ::tutorial::TextMessage_Result& result(int index) const;
+  ::tutorial::TextMessage_Result* add_result();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_Result >&
       result() const;
 
-  // repeated .tutorial.HelloWorld.SubMessage dummy = 9;
+  // repeated .tutorial.TextMessage.SubMessage dummy = 9;
   int dummy_size() const;
   private:
   int _internal_dummy_size() const;
   public:
   void clear_dummy();
-  ::tutorial::HelloWorld_SubMessage* mutable_dummy(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_SubMessage >*
+  ::tutorial::TextMessage_SubMessage* mutable_dummy(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_SubMessage >*
       mutable_dummy();
   private:
-  const ::tutorial::HelloWorld_SubMessage& _internal_dummy(int index) const;
-  ::tutorial::HelloWorld_SubMessage* _internal_add_dummy();
+  const ::tutorial::TextMessage_SubMessage& _internal_dummy(int index) const;
+  ::tutorial::TextMessage_SubMessage* _internal_add_dummy();
   public:
-  const ::tutorial::HelloWorld_SubMessage& dummy(int index) const;
-  ::tutorial::HelloWorld_SubMessage* add_dummy();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_SubMessage >&
+  const ::tutorial::TextMessage_SubMessage& dummy(int index) const;
+  ::tutorial::TextMessage_SubMessage* add_dummy();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_SubMessage >&
       dummy() const;
 
   // optional string TITLE = 3;
@@ -791,7 +795,7 @@ class HelloWorld PROTOBUF_FINAL :
 
   void clear_test_oneof();
   TestOneofCase test_oneof_case() const;
-  // @@protoc_insertion_point(class_scope:tutorial.HelloWorld)
+  // @@protoc_insertion_point(class_scope:tutorial.TextMessage)
  private:
   class _Internal;
   void set_has_test_a();
@@ -805,8 +809,8 @@ class HelloWorld PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_Result > result_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_SubMessage > dummy_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_Result > result_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_SubMessage > dummy_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr title_;
   double doubleid_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
@@ -819,6 +823,159 @@ class HelloWorld PROTOBUF_FINAL :
 
   friend struct ::TableStruct_helloworld_2eproto;
 };
+// -------------------------------------------------------------------
+
+class HelloWorld PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:tutorial.HelloWorld) */ {
+ public:
+  inline HelloWorld() : HelloWorld(nullptr) {};
+  virtual ~HelloWorld();
+
+  HelloWorld(const HelloWorld& from);
+  HelloWorld(HelloWorld&& from) noexcept
+    : HelloWorld() {
+    *this = ::std::move(from);
+  }
+
+  inline HelloWorld& operator=(const HelloWorld& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline HelloWorld& operator=(HelloWorld&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance);
+  }
+  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const HelloWorld& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const HelloWorld* internal_default_instance() {
+    return reinterpret_cast<const HelloWorld*>(
+               &_HelloWorld_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(HelloWorld& a, HelloWorld& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(HelloWorld* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(HelloWorld* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline HelloWorld* New() const final {
+    return CreateMaybeMessage<HelloWorld>(nullptr);
+  }
+
+  HelloWorld* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<HelloWorld>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const HelloWorld& from);
+  void MergeFrom(const HelloWorld& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(HelloWorld* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "tutorial.HelloWorld";
+  }
+  protected:
+  explicit HelloWorld(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_helloworld_2eproto);
+    return ::descriptor_table_helloworld_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kMsgFieldNumber = 1,
+  };
+  // repeated .tutorial.TextMessage msg = 1;
+  int msg_size() const;
+  private:
+  int _internal_msg_size() const;
+  public:
+  void clear_msg();
+  ::tutorial::TextMessage* mutable_msg(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage >*
+      mutable_msg();
+  private:
+  const ::tutorial::TextMessage& _internal_msg(int index) const;
+  ::tutorial::TextMessage* _internal_add_msg();
+  public:
+  const ::tutorial::TextMessage& msg(int index) const;
+  ::tutorial::TextMessage* add_msg();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage >&
+      msg() const;
+
+  // @@protoc_insertion_point(class_scope:tutorial.HelloWorld)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage > msg_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_helloworld_2eproto;
+};
 // ===================================================================
 
 
@@ -828,72 +985,72 @@ class HelloWorld PROTOBUF_FINAL :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// HelloWorld_Result
+// TextMessage_Result
 
 // required string name = 5;
-inline bool HelloWorld_Result::_internal_has_name() const {
+inline bool TextMessage_Result::_internal_has_name() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool HelloWorld_Result::has_name() const {
+inline bool TextMessage_Result::has_name() const {
   return _internal_has_name();
 }
-inline void HelloWorld_Result::clear_name() {
+inline void TextMessage_Result::clear_name() {
   name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& HelloWorld_Result::name() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.Result.name)
+inline const std::string& TextMessage_Result::name() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.Result.name)
   return _internal_name();
 }
-inline void HelloWorld_Result::set_name(const std::string& value) {
+inline void TextMessage_Result::set_name(const std::string& value) {
   _internal_set_name(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.Result.name)
 }
-inline std::string* HelloWorld_Result::mutable_name() {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.Result.name)
+inline std::string* TextMessage_Result::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.Result.name)
   return _internal_mutable_name();
 }
-inline const std::string& HelloWorld_Result::_internal_name() const {
+inline const std::string& TextMessage_Result::_internal_name() const {
   return name_.Get();
 }
-inline void HelloWorld_Result::_internal_set_name(const std::string& value) {
+inline void TextMessage_Result::_internal_set_name(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void HelloWorld_Result::set_name(std::string&& value) {
+inline void TextMessage_Result::set_name(std::string&& value) {
   _has_bits_[0] |= 0x00000001u;
   name_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_set_rvalue:tutorial.TextMessage.Result.name)
 }
-inline void HelloWorld_Result::set_name(const char* value) {
+inline void TextMessage_Result::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000001u;
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_set_char:tutorial.TextMessage.Result.name)
 }
-inline void HelloWorld_Result::set_name(const char* value,
+inline void TextMessage_Result::set_name(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000001u;
   name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_set_pointer:tutorial.TextMessage.Result.name)
 }
-inline std::string* HelloWorld_Result::_internal_mutable_name() {
+inline std::string* TextMessage_Result::_internal_mutable_name() {
   _has_bits_[0] |= 0x00000001u;
   return name_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* HelloWorld_Result::release_name() {
-  // @@protoc_insertion_point(field_release:tutorial.HelloWorld.Result.name)
+inline std::string* TextMessage_Result::release_name() {
+  // @@protoc_insertion_point(field_release:tutorial.TextMessage.Result.name)
   if (!_internal_has_name()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000001u;
   return name_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void HelloWorld_Result::set_allocated_name(std::string* name) {
+inline void TextMessage_Result::set_allocated_name(std::string* name) {
   if (name != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -901,16 +1058,16 @@ inline void HelloWorld_Result::set_allocated_name(std::string* name) {
   }
   name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_set_allocated:tutorial.TextMessage.Result.name)
 }
-inline std::string* HelloWorld_Result::unsafe_arena_release_name() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.HelloWorld.Result.name)
+inline std::string* TextMessage_Result::unsafe_arena_release_name() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.TextMessage.Result.name)
   GOOGLE_DCHECK(GetArena() != nullptr);
   _has_bits_[0] &= ~0x00000001u;
   return name_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       GetArena());
 }
-inline void HelloWorld_Result::unsafe_arena_set_allocated_name(
+inline void TextMessage_Result::unsafe_arena_set_allocated_name(
     std::string* name) {
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (name != nullptr) {
@@ -920,73 +1077,73 @@ inline void HelloWorld_Result::unsafe_arena_set_allocated_name(
   }
   name_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       name, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.HelloWorld.Result.name)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.TextMessage.Result.name)
 }
 
 // optional string email = 6;
-inline bool HelloWorld_Result::_internal_has_email() const {
+inline bool TextMessage_Result::_internal_has_email() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool HelloWorld_Result::has_email() const {
+inline bool TextMessage_Result::has_email() const {
   return _internal_has_email();
 }
-inline void HelloWorld_Result::clear_email() {
+inline void TextMessage_Result::clear_email() {
   email_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& HelloWorld_Result::email() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.Result.email)
+inline const std::string& TextMessage_Result::email() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.Result.email)
   return _internal_email();
 }
-inline void HelloWorld_Result::set_email(const std::string& value) {
+inline void TextMessage_Result::set_email(const std::string& value) {
   _internal_set_email(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.Result.email)
 }
-inline std::string* HelloWorld_Result::mutable_email() {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.Result.email)
+inline std::string* TextMessage_Result::mutable_email() {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.Result.email)
   return _internal_mutable_email();
 }
-inline const std::string& HelloWorld_Result::_internal_email() const {
+inline const std::string& TextMessage_Result::_internal_email() const {
   return email_.Get();
 }
-inline void HelloWorld_Result::_internal_set_email(const std::string& value) {
+inline void TextMessage_Result::_internal_set_email(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void HelloWorld_Result::set_email(std::string&& value) {
+inline void TextMessage_Result::set_email(std::string&& value) {
   _has_bits_[0] |= 0x00000002u;
   email_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_set_rvalue:tutorial.TextMessage.Result.email)
 }
-inline void HelloWorld_Result::set_email(const char* value) {
+inline void TextMessage_Result::set_email(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000002u;
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_set_char:tutorial.TextMessage.Result.email)
 }
-inline void HelloWorld_Result::set_email(const char* value,
+inline void TextMessage_Result::set_email(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000002u;
   email_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_set_pointer:tutorial.TextMessage.Result.email)
 }
-inline std::string* HelloWorld_Result::_internal_mutable_email() {
+inline std::string* TextMessage_Result::_internal_mutable_email() {
   _has_bits_[0] |= 0x00000002u;
   return email_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* HelloWorld_Result::release_email() {
-  // @@protoc_insertion_point(field_release:tutorial.HelloWorld.Result.email)
+inline std::string* TextMessage_Result::release_email() {
+  // @@protoc_insertion_point(field_release:tutorial.TextMessage.Result.email)
   if (!_internal_has_email()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000002u;
   return email_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void HelloWorld_Result::set_allocated_email(std::string* email) {
+inline void TextMessage_Result::set_allocated_email(std::string* email) {
   if (email != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
@@ -994,16 +1151,16 @@ inline void HelloWorld_Result::set_allocated_email(std::string* email) {
   }
   email_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), email,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_set_allocated:tutorial.TextMessage.Result.email)
 }
-inline std::string* HelloWorld_Result::unsafe_arena_release_email() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.HelloWorld.Result.email)
+inline std::string* TextMessage_Result::unsafe_arena_release_email() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.TextMessage.Result.email)
   GOOGLE_DCHECK(GetArena() != nullptr);
   _has_bits_[0] &= ~0x00000002u;
   return email_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       GetArena());
 }
-inline void HelloWorld_Result::unsafe_arena_set_allocated_email(
+inline void TextMessage_Result::unsafe_arena_set_allocated_email(
     std::string* email) {
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (email != nullptr) {
@@ -1013,133 +1170,133 @@ inline void HelloWorld_Result::unsafe_arena_set_allocated_email(
   }
   email_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       email, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.HelloWorld.Result.email)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.TextMessage.Result.email)
 }
 
 // -------------------------------------------------------------------
 
-// HelloWorld_SubMessage
+// TextMessage_SubMessage
 
 // optional int32 number = 1;
-inline bool HelloWorld_SubMessage::_internal_has_number() const {
+inline bool TextMessage_SubMessage::_internal_has_number() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool HelloWorld_SubMessage::has_number() const {
+inline bool TextMessage_SubMessage::has_number() const {
   return _internal_has_number();
 }
-inline void HelloWorld_SubMessage::clear_number() {
+inline void TextMessage_SubMessage::clear_number() {
   number_ = 0;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 HelloWorld_SubMessage::_internal_number() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage_SubMessage::_internal_number() const {
   return number_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 HelloWorld_SubMessage::number() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.SubMessage.number)
+inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage_SubMessage::number() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.SubMessage.number)
   return _internal_number();
 }
-inline void HelloWorld_SubMessage::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void TextMessage_SubMessage::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _has_bits_[0] |= 0x00000004u;
   number_ = value;
 }
-inline void HelloWorld_SubMessage::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void TextMessage_SubMessage::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_number(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.SubMessage.number)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.SubMessage.number)
 }
 
 // optional double type = 2;
-inline bool HelloWorld_SubMessage::_internal_has_type() const {
+inline bool TextMessage_SubMessage::_internal_has_type() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool HelloWorld_SubMessage::has_type() const {
+inline bool TextMessage_SubMessage::has_type() const {
   return _internal_has_type();
 }
-inline void HelloWorld_SubMessage::clear_type() {
+inline void TextMessage_SubMessage::clear_type() {
   type_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double HelloWorld_SubMessage::_internal_type() const {
+inline double TextMessage_SubMessage::_internal_type() const {
   return type_;
 }
-inline double HelloWorld_SubMessage::type() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.SubMessage.type)
+inline double TextMessage_SubMessage::type() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.SubMessage.type)
   return _internal_type();
 }
-inline void HelloWorld_SubMessage::_internal_set_type(double value) {
+inline void TextMessage_SubMessage::_internal_set_type(double value) {
   _has_bits_[0] |= 0x00000002u;
   type_ = value;
 }
-inline void HelloWorld_SubMessage::set_type(double value) {
+inline void TextMessage_SubMessage::set_type(double value) {
   _internal_set_type(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.SubMessage.type)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.SubMessage.type)
 }
 
 // optional string subtext = 3;
-inline bool HelloWorld_SubMessage::_internal_has_subtext() const {
+inline bool TextMessage_SubMessage::_internal_has_subtext() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool HelloWorld_SubMessage::has_subtext() const {
+inline bool TextMessage_SubMessage::has_subtext() const {
   return _internal_has_subtext();
 }
-inline void HelloWorld_SubMessage::clear_subtext() {
+inline void TextMessage_SubMessage::clear_subtext() {
   subtext_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& HelloWorld_SubMessage::subtext() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.SubMessage.subtext)
+inline const std::string& TextMessage_SubMessage::subtext() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.SubMessage.subtext)
   return _internal_subtext();
 }
-inline void HelloWorld_SubMessage::set_subtext(const std::string& value) {
+inline void TextMessage_SubMessage::set_subtext(const std::string& value) {
   _internal_set_subtext(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.SubMessage.subtext)
 }
-inline std::string* HelloWorld_SubMessage::mutable_subtext() {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.SubMessage.subtext)
+inline std::string* TextMessage_SubMessage::mutable_subtext() {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.SubMessage.subtext)
   return _internal_mutable_subtext();
 }
-inline const std::string& HelloWorld_SubMessage::_internal_subtext() const {
+inline const std::string& TextMessage_SubMessage::_internal_subtext() const {
   return subtext_.Get();
 }
-inline void HelloWorld_SubMessage::_internal_set_subtext(const std::string& value) {
+inline void TextMessage_SubMessage::_internal_set_subtext(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   subtext_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void HelloWorld_SubMessage::set_subtext(std::string&& value) {
+inline void TextMessage_SubMessage::set_subtext(std::string&& value) {
   _has_bits_[0] |= 0x00000001u;
   subtext_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_set_rvalue:tutorial.TextMessage.SubMessage.subtext)
 }
-inline void HelloWorld_SubMessage::set_subtext(const char* value) {
+inline void TextMessage_SubMessage::set_subtext(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000001u;
   subtext_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_set_char:tutorial.TextMessage.SubMessage.subtext)
 }
-inline void HelloWorld_SubMessage::set_subtext(const char* value,
+inline void TextMessage_SubMessage::set_subtext(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000001u;
   subtext_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_set_pointer:tutorial.TextMessage.SubMessage.subtext)
 }
-inline std::string* HelloWorld_SubMessage::_internal_mutable_subtext() {
+inline std::string* TextMessage_SubMessage::_internal_mutable_subtext() {
   _has_bits_[0] |= 0x00000001u;
   return subtext_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* HelloWorld_SubMessage::release_subtext() {
-  // @@protoc_insertion_point(field_release:tutorial.HelloWorld.SubMessage.subtext)
+inline std::string* TextMessage_SubMessage::release_subtext() {
+  // @@protoc_insertion_point(field_release:tutorial.TextMessage.SubMessage.subtext)
   if (!_internal_has_subtext()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000001u;
   return subtext_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void HelloWorld_SubMessage::set_allocated_subtext(std::string* subtext) {
+inline void TextMessage_SubMessage::set_allocated_subtext(std::string* subtext) {
   if (subtext != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -1147,16 +1304,16 @@ inline void HelloWorld_SubMessage::set_allocated_subtext(std::string* subtext) {
   }
   subtext_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), subtext,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_set_allocated:tutorial.TextMessage.SubMessage.subtext)
 }
-inline std::string* HelloWorld_SubMessage::unsafe_arena_release_subtext() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.HelloWorld.SubMessage.subtext)
+inline std::string* TextMessage_SubMessage::unsafe_arena_release_subtext() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.TextMessage.SubMessage.subtext)
   GOOGLE_DCHECK(GetArena() != nullptr);
   _has_bits_[0] &= ~0x00000001u;
   return subtext_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       GetArena());
 }
-inline void HelloWorld_SubMessage::unsafe_arena_set_allocated_subtext(
+inline void TextMessage_SubMessage::unsafe_arena_set_allocated_subtext(
     std::string* subtext) {
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (subtext != nullptr) {
@@ -1166,133 +1323,133 @@ inline void HelloWorld_SubMessage::unsafe_arena_set_allocated_subtext(
   }
   subtext_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       subtext, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.HelloWorld.SubMessage.subtext)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.TextMessage.SubMessage.subtext)
 }
 
 // -------------------------------------------------------------------
 
-// HelloWorld
+// TextMessage
 
 // required int32 id = 1;
-inline bool HelloWorld::_internal_has_id() const {
+inline bool TextMessage::_internal_has_id() const {
   bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool HelloWorld::has_id() const {
+inline bool TextMessage::has_id() const {
   return _internal_has_id();
 }
-inline void HelloWorld::clear_id() {
+inline void TextMessage::clear_id() {
   id_ = 0;
   _has_bits_[0] &= ~0x00000004u;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 HelloWorld::_internal_id() const {
+inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage::_internal_id() const {
   return id_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::int32 HelloWorld::id() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.id)
+inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage::id() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.id)
   return _internal_id();
 }
-inline void HelloWorld::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void TextMessage::_internal_set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _has_bits_[0] |= 0x00000004u;
   id_ = value;
 }
-inline void HelloWorld::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
+inline void TextMessage::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_id(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.id)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.id)
 }
 
 // optional double DoubleId = 2;
-inline bool HelloWorld::_internal_has_doubleid() const {
+inline bool TextMessage::_internal_has_doubleid() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool HelloWorld::has_doubleid() const {
+inline bool TextMessage::has_doubleid() const {
   return _internal_has_doubleid();
 }
-inline void HelloWorld::clear_doubleid() {
+inline void TextMessage::clear_doubleid() {
   doubleid_ = 0;
   _has_bits_[0] &= ~0x00000002u;
 }
-inline double HelloWorld::_internal_doubleid() const {
+inline double TextMessage::_internal_doubleid() const {
   return doubleid_;
 }
-inline double HelloWorld::doubleid() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.DoubleId)
+inline double TextMessage::doubleid() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.DoubleId)
   return _internal_doubleid();
 }
-inline void HelloWorld::_internal_set_doubleid(double value) {
+inline void TextMessage::_internal_set_doubleid(double value) {
   _has_bits_[0] |= 0x00000002u;
   doubleid_ = value;
 }
-inline void HelloWorld::set_doubleid(double value) {
+inline void TextMessage::set_doubleid(double value) {
   _internal_set_doubleid(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.DoubleId)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.DoubleId)
 }
 
 // optional string TITLE = 3;
-inline bool HelloWorld::_internal_has_title() const {
+inline bool TextMessage::_internal_has_title() const {
   bool value = (_has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool HelloWorld::has_title() const {
+inline bool TextMessage::has_title() const {
   return _internal_has_title();
 }
-inline void HelloWorld::clear_title() {
+inline void TextMessage::clear_title() {
   title_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   _has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& HelloWorld::title() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.TITLE)
+inline const std::string& TextMessage::title() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.TITLE)
   return _internal_title();
 }
-inline void HelloWorld::set_title(const std::string& value) {
+inline void TextMessage::set_title(const std::string& value) {
   _internal_set_title(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.TITLE)
 }
-inline std::string* HelloWorld::mutable_title() {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.TITLE)
+inline std::string* TextMessage::mutable_title() {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.TITLE)
   return _internal_mutable_title();
 }
-inline const std::string& HelloWorld::_internal_title() const {
+inline const std::string& TextMessage::_internal_title() const {
   return title_.Get();
 }
-inline void HelloWorld::_internal_set_title(const std::string& value) {
+inline void TextMessage::_internal_set_title(const std::string& value) {
   _has_bits_[0] |= 0x00000001u;
   title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void HelloWorld::set_title(std::string&& value) {
+inline void TextMessage::set_title(std::string&& value) {
   _has_bits_[0] |= 0x00000001u;
   title_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_set_rvalue:tutorial.TextMessage.TITLE)
 }
-inline void HelloWorld::set_title(const char* value) {
+inline void TextMessage::set_title(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000001u;
   title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
               GetArena());
-  // @@protoc_insertion_point(field_set_char:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_set_char:tutorial.TextMessage.TITLE)
 }
-inline void HelloWorld::set_title(const char* value,
+inline void TextMessage::set_title(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000001u;
   title_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_set_pointer:tutorial.TextMessage.TITLE)
 }
-inline std::string* HelloWorld::_internal_mutable_title() {
+inline std::string* TextMessage::_internal_mutable_title() {
   _has_bits_[0] |= 0x00000001u;
   return title_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* HelloWorld::release_title() {
-  // @@protoc_insertion_point(field_release:tutorial.HelloWorld.TITLE)
+inline std::string* TextMessage::release_title() {
+  // @@protoc_insertion_point(field_release:tutorial.TextMessage.TITLE)
   if (!_internal_has_title()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000001u;
   return title_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void HelloWorld::set_allocated_title(std::string* title) {
+inline void TextMessage::set_allocated_title(std::string* title) {
   if (title != nullptr) {
     _has_bits_[0] |= 0x00000001u;
   } else {
@@ -1300,16 +1457,16 @@ inline void HelloWorld::set_allocated_title(std::string* title) {
   }
   title_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), title,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_set_allocated:tutorial.TextMessage.TITLE)
 }
-inline std::string* HelloWorld::unsafe_arena_release_title() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.HelloWorld.TITLE)
+inline std::string* TextMessage::unsafe_arena_release_title() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.TextMessage.TITLE)
   GOOGLE_DCHECK(GetArena() != nullptr);
   _has_bits_[0] &= ~0x00000001u;
   return title_.UnsafeArenaRelease(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       GetArena());
 }
-inline void HelloWorld::unsafe_arena_set_allocated_title(
+inline void TextMessage::unsafe_arena_set_allocated_title(
     std::string* title) {
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (title != nullptr) {
@@ -1319,83 +1476,83 @@ inline void HelloWorld::unsafe_arena_set_allocated_title(
   }
   title_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       title, GetArena());
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.HelloWorld.TITLE)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.TextMessage.TITLE)
 }
 
 // repeated group Result = 4 { ... };
-inline int HelloWorld::_internal_result_size() const {
+inline int TextMessage::_internal_result_size() const {
   return result_.size();
 }
-inline int HelloWorld::result_size() const {
+inline int TextMessage::result_size() const {
   return _internal_result_size();
 }
-inline void HelloWorld::clear_result() {
+inline void TextMessage::clear_result() {
   result_.Clear();
 }
-inline ::tutorial::HelloWorld_Result* HelloWorld::mutable_result(int index) {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.result)
+inline ::tutorial::TextMessage_Result* TextMessage::mutable_result(int index) {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.result)
   return result_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_Result >*
-HelloWorld::mutable_result() {
-  // @@protoc_insertion_point(field_mutable_list:tutorial.HelloWorld.result)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_Result >*
+TextMessage::mutable_result() {
+  // @@protoc_insertion_point(field_mutable_list:tutorial.TextMessage.result)
   return &result_;
 }
-inline const ::tutorial::HelloWorld_Result& HelloWorld::_internal_result(int index) const {
+inline const ::tutorial::TextMessage_Result& TextMessage::_internal_result(int index) const {
   return result_.Get(index);
 }
-inline const ::tutorial::HelloWorld_Result& HelloWorld::result(int index) const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.result)
+inline const ::tutorial::TextMessage_Result& TextMessage::result(int index) const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.result)
   return _internal_result(index);
 }
-inline ::tutorial::HelloWorld_Result* HelloWorld::_internal_add_result() {
+inline ::tutorial::TextMessage_Result* TextMessage::_internal_add_result() {
   return result_.Add();
 }
-inline ::tutorial::HelloWorld_Result* HelloWorld::add_result() {
-  // @@protoc_insertion_point(field_add:tutorial.HelloWorld.result)
+inline ::tutorial::TextMessage_Result* TextMessage::add_result() {
+  // @@protoc_insertion_point(field_add:tutorial.TextMessage.result)
   return _internal_add_result();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_Result >&
-HelloWorld::result() const {
-  // @@protoc_insertion_point(field_list:tutorial.HelloWorld.result)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_Result >&
+TextMessage::result() const {
+  // @@protoc_insertion_point(field_list:tutorial.TextMessage.result)
   return result_;
 }
 
 // string test_a = 7;
-inline bool HelloWorld::_internal_has_test_a() const {
+inline bool TextMessage::_internal_has_test_a() const {
   return test_oneof_case() == kTestA;
 }
-inline bool HelloWorld::has_test_a() const {
+inline bool TextMessage::has_test_a() const {
   return _internal_has_test_a();
 }
-inline void HelloWorld::set_has_test_a() {
+inline void TextMessage::set_has_test_a() {
   _oneof_case_[0] = kTestA;
 }
-inline void HelloWorld::clear_test_a() {
+inline void TextMessage::clear_test_a() {
   if (_internal_has_test_a()) {
     test_oneof_.test_a_.Destroy(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
     clear_has_test_oneof();
   }
 }
-inline const std::string& HelloWorld::test_a() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.test_a)
+inline const std::string& TextMessage::test_a() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.test_a)
   return _internal_test_a();
 }
-inline void HelloWorld::set_test_a(const std::string& value) {
+inline void TextMessage::set_test_a(const std::string& value) {
   _internal_set_test_a(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.test_a)
 }
-inline std::string* HelloWorld::mutable_test_a() {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.test_a)
+inline std::string* TextMessage::mutable_test_a() {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.test_a)
   return _internal_mutable_test_a();
 }
-inline const std::string& HelloWorld::_internal_test_a() const {
+inline const std::string& TextMessage::_internal_test_a() const {
   if (_internal_has_test_a()) {
     return test_oneof_.test_a_.Get();
   }
   return *&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited();
 }
-inline void HelloWorld::_internal_set_test_a(const std::string& value) {
+inline void TextMessage::_internal_set_test_a(const std::string& value) {
   if (!_internal_has_test_a()) {
     clear_test_oneof();
     set_has_test_a();
@@ -1403,8 +1560,8 @@ inline void HelloWorld::_internal_set_test_a(const std::string& value) {
   }
   test_oneof_.test_a_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value, GetArena());
 }
-inline void HelloWorld::set_test_a(std::string&& value) {
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.test_a)
+inline void TextMessage::set_test_a(std::string&& value) {
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.test_a)
   if (!_internal_has_test_a()) {
     clear_test_oneof();
     set_has_test_a();
@@ -1412,9 +1569,9 @@ inline void HelloWorld::set_test_a(std::string&& value) {
   }
   test_oneof_.test_a_.Set(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_set_rvalue:tutorial.TextMessage.test_a)
 }
-inline void HelloWorld::set_test_a(const char* value) {
+inline void TextMessage::set_test_a(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   if (!_internal_has_test_a()) {
     clear_test_oneof();
@@ -1423,9 +1580,9 @@ inline void HelloWorld::set_test_a(const char* value) {
   }
   test_oneof_.test_a_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_set_char:tutorial.TextMessage.test_a)
 }
-inline void HelloWorld::set_test_a(const char* value,
+inline void TextMessage::set_test_a(const char* value,
                              size_t size) {
   if (!_internal_has_test_a()) {
     clear_test_oneof();
@@ -1436,9 +1593,9 @@ inline void HelloWorld::set_test_a(const char* value,
       &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(
       reinterpret_cast<const char*>(value), size),
       GetArena());
-  // @@protoc_insertion_point(field_set_pointer:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_set_pointer:tutorial.TextMessage.test_a)
 }
-inline std::string* HelloWorld::_internal_mutable_test_a() {
+inline std::string* TextMessage::_internal_mutable_test_a() {
   if (!_internal_has_test_a()) {
     clear_test_oneof();
     set_has_test_a();
@@ -1446,8 +1603,8 @@ inline std::string* HelloWorld::_internal_mutable_test_a() {
   }
   return test_oneof_.test_a_.Mutable(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline std::string* HelloWorld::release_test_a() {
-  // @@protoc_insertion_point(field_release:tutorial.HelloWorld.test_a)
+inline std::string* TextMessage::release_test_a() {
+  // @@protoc_insertion_point(field_release:tutorial.TextMessage.test_a)
   if (_internal_has_test_a()) {
     clear_has_test_oneof();
     return test_oneof_.test_a_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -1455,7 +1612,7 @@ inline std::string* HelloWorld::release_test_a() {
     return nullptr;
   }
 }
-inline void HelloWorld::set_allocated_test_a(std::string* test_a) {
+inline void TextMessage::set_allocated_test_a(std::string* test_a) {
   if (has_test_oneof()) {
     clear_test_oneof();
   }
@@ -1463,10 +1620,10 @@ inline void HelloWorld::set_allocated_test_a(std::string* test_a) {
     set_has_test_a();
     test_oneof_.test_a_.UnsafeSetDefault(test_a);
   }
-  // @@protoc_insertion_point(field_set_allocated:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_set_allocated:tutorial.TextMessage.test_a)
 }
-inline std::string* HelloWorld::unsafe_arena_release_test_a() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.HelloWorld.test_a)
+inline std::string* TextMessage::unsafe_arena_release_test_a() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:tutorial.TextMessage.test_a)
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (_internal_has_test_a()) {
     clear_has_test_oneof();
@@ -1476,7 +1633,7 @@ inline std::string* HelloWorld::unsafe_arena_release_test_a() {
     return nullptr;
   }
 }
-inline void HelloWorld::unsafe_arena_set_allocated_test_a(std::string* test_a) {
+inline void TextMessage::unsafe_arena_set_allocated_test_a(std::string* test_a) {
   GOOGLE_DCHECK(GetArena() != nullptr);
   if (!_internal_has_test_a()) {
     test_oneof_.test_a_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1486,98 +1643,143 @@ inline void HelloWorld::unsafe_arena_set_allocated_test_a(std::string* test_a) {
     set_has_test_a();
     test_oneof_.test_a_.UnsafeArenaSetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), test_a, GetArena());
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.HelloWorld.test_a)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:tutorial.TextMessage.test_a)
 }
 
 // double test_b = 8;
-inline bool HelloWorld::_internal_has_test_b() const {
+inline bool TextMessage::_internal_has_test_b() const {
   return test_oneof_case() == kTestB;
 }
-inline bool HelloWorld::has_test_b() const {
+inline bool TextMessage::has_test_b() const {
   return _internal_has_test_b();
 }
-inline void HelloWorld::set_has_test_b() {
+inline void TextMessage::set_has_test_b() {
   _oneof_case_[0] = kTestB;
 }
-inline void HelloWorld::clear_test_b() {
+inline void TextMessage::clear_test_b() {
   if (_internal_has_test_b()) {
     test_oneof_.test_b_ = 0;
     clear_has_test_oneof();
   }
 }
-inline double HelloWorld::_internal_test_b() const {
+inline double TextMessage::_internal_test_b() const {
   if (_internal_has_test_b()) {
     return test_oneof_.test_b_;
   }
   return 0;
 }
-inline void HelloWorld::_internal_set_test_b(double value) {
+inline void TextMessage::_internal_set_test_b(double value) {
   if (!_internal_has_test_b()) {
     clear_test_oneof();
     set_has_test_b();
   }
   test_oneof_.test_b_ = value;
 }
-inline double HelloWorld::test_b() const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.test_b)
+inline double TextMessage::test_b() const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.test_b)
   return _internal_test_b();
 }
-inline void HelloWorld::set_test_b(double value) {
+inline void TextMessage::set_test_b(double value) {
   _internal_set_test_b(value);
-  // @@protoc_insertion_point(field_set:tutorial.HelloWorld.test_b)
+  // @@protoc_insertion_point(field_set:tutorial.TextMessage.test_b)
 }
 
-// repeated .tutorial.HelloWorld.SubMessage dummy = 9;
-inline int HelloWorld::_internal_dummy_size() const {
+// repeated .tutorial.TextMessage.SubMessage dummy = 9;
+inline int TextMessage::_internal_dummy_size() const {
   return dummy_.size();
 }
-inline int HelloWorld::dummy_size() const {
+inline int TextMessage::dummy_size() const {
   return _internal_dummy_size();
 }
-inline void HelloWorld::clear_dummy() {
+inline void TextMessage::clear_dummy() {
   dummy_.Clear();
 }
-inline ::tutorial::HelloWorld_SubMessage* HelloWorld::mutable_dummy(int index) {
-  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.dummy)
+inline ::tutorial::TextMessage_SubMessage* TextMessage::mutable_dummy(int index) {
+  // @@protoc_insertion_point(field_mutable:tutorial.TextMessage.dummy)
   return dummy_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_SubMessage >*
-HelloWorld::mutable_dummy() {
-  // @@protoc_insertion_point(field_mutable_list:tutorial.HelloWorld.dummy)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_SubMessage >*
+TextMessage::mutable_dummy() {
+  // @@protoc_insertion_point(field_mutable_list:tutorial.TextMessage.dummy)
   return &dummy_;
 }
-inline const ::tutorial::HelloWorld_SubMessage& HelloWorld::_internal_dummy(int index) const {
+inline const ::tutorial::TextMessage_SubMessage& TextMessage::_internal_dummy(int index) const {
   return dummy_.Get(index);
 }
-inline const ::tutorial::HelloWorld_SubMessage& HelloWorld::dummy(int index) const {
-  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.dummy)
+inline const ::tutorial::TextMessage_SubMessage& TextMessage::dummy(int index) const {
+  // @@protoc_insertion_point(field_get:tutorial.TextMessage.dummy)
   return _internal_dummy(index);
 }
-inline ::tutorial::HelloWorld_SubMessage* HelloWorld::_internal_add_dummy() {
+inline ::tutorial::TextMessage_SubMessage* TextMessage::_internal_add_dummy() {
   return dummy_.Add();
 }
-inline ::tutorial::HelloWorld_SubMessage* HelloWorld::add_dummy() {
-  // @@protoc_insertion_point(field_add:tutorial.HelloWorld.dummy)
+inline ::tutorial::TextMessage_SubMessage* TextMessage::add_dummy() {
+  // @@protoc_insertion_point(field_add:tutorial.TextMessage.dummy)
   return _internal_add_dummy();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::HelloWorld_SubMessage >&
-HelloWorld::dummy() const {
-  // @@protoc_insertion_point(field_list:tutorial.HelloWorld.dummy)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage_SubMessage >&
+TextMessage::dummy() const {
+  // @@protoc_insertion_point(field_list:tutorial.TextMessage.dummy)
   return dummy_;
 }
 
-inline bool HelloWorld::has_test_oneof() const {
+inline bool TextMessage::has_test_oneof() const {
   return test_oneof_case() != TEST_ONEOF_NOT_SET;
 }
-inline void HelloWorld::clear_has_test_oneof() {
+inline void TextMessage::clear_has_test_oneof() {
   _oneof_case_[0] = TEST_ONEOF_NOT_SET;
 }
-inline HelloWorld::TestOneofCase HelloWorld::test_oneof_case() const {
-  return HelloWorld::TestOneofCase(_oneof_case_[0]);
+inline TextMessage::TestOneofCase TextMessage::test_oneof_case() const {
+  return TextMessage::TestOneofCase(_oneof_case_[0]);
 }
+// -------------------------------------------------------------------
+
+// HelloWorld
+
+// repeated .tutorial.TextMessage msg = 1;
+inline int HelloWorld::_internal_msg_size() const {
+  return msg_.size();
+}
+inline int HelloWorld::msg_size() const {
+  return _internal_msg_size();
+}
+inline void HelloWorld::clear_msg() {
+  msg_.Clear();
+}
+inline ::tutorial::TextMessage* HelloWorld::mutable_msg(int index) {
+  // @@protoc_insertion_point(field_mutable:tutorial.HelloWorld.msg)
+  return msg_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage >*
+HelloWorld::mutable_msg() {
+  // @@protoc_insertion_point(field_mutable_list:tutorial.HelloWorld.msg)
+  return &msg_;
+}
+inline const ::tutorial::TextMessage& HelloWorld::_internal_msg(int index) const {
+  return msg_.Get(index);
+}
+inline const ::tutorial::TextMessage& HelloWorld::msg(int index) const {
+  // @@protoc_insertion_point(field_get:tutorial.HelloWorld.msg)
+  return _internal_msg(index);
+}
+inline ::tutorial::TextMessage* HelloWorld::_internal_add_msg() {
+  return msg_.Add();
+}
+inline ::tutorial::TextMessage* HelloWorld::add_msg() {
+  // @@protoc_insertion_point(field_add:tutorial.HelloWorld.msg)
+  return _internal_add_msg();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::tutorial::TextMessage >&
+HelloWorld::msg() const {
+  // @@protoc_insertion_point(field_list:tutorial.HelloWorld.msg)
+  return msg_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -1589,10 +1791,10 @@ inline HelloWorld::TestOneofCase HelloWorld::test_oneof_case() const {
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::tutorial::HelloWorld_MessageType> : ::std::true_type {};
+template <> struct is_proto_enum< ::tutorial::TextMessage_MessageType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::tutorial::HelloWorld_MessageType>() {
-  return ::tutorial::HelloWorld_MessageType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::tutorial::TextMessage_MessageType>() {
+  return ::tutorial::TextMessage_MessageType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE
