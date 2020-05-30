@@ -34,9 +34,9 @@ void Fun(tutorial::TextMessage* textmsg) {
         cout << "Is this urgent? ";
         string type;
         getline(cin, type);
-        if (type == "yes") {
+        if (type == "urgent") {
         simple_message->set_type(tutorial::TextMessage::URGENT);
-        } else if (type == "no") {
+        } else if (type == "normal") {
         simple_message->set_type(tutorial::TextMessage::NORMAL);
         } else {
         cout << "Unknown message type. Using default" << endl;

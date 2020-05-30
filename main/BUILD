@@ -13,3 +13,9 @@ cc_binary(
     srcs = ["add_details.cc"],
     deps = [":helloworld_cc_proto"],
 )
+
+cc_binary(
+    name = "read_details_cpp",
+    srcs = ["read_details.cc"],
+    deps = [":helloworld_cc_proto"],
+)
