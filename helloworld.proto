@@ -1,0 +1,31 @@
+syntax = "proto2";
+
+package tutorial;
+
+message HelloWorld {
+    required int32 id = 1;
+    optional double DoubleId = 2; 
+    optional string TITLE = 3;
+    
+    enum MessageType {
+        URGENT = 1;
+        NORMAL = 2;
+    }
+
+    repeated group Result = 4 {
+        required string name = 5;
+        optional string email = 6;
+    }
+    oneof test_oneof {
+        string test_a = 7;
+        double test_b = 8;
+    }
+
+    message SubMessage {
+        optional int32 number = 1;
+        optional double type = 2;
+        optional string subtext =3;
+  }
+  repeated SubMessage dummy = 9;
+}
+
