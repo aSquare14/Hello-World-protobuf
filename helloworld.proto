@@ -8,8 +8,8 @@ message HelloWorld {
     optional string TITLE = 3;
     
     enum MessageType {
-        URGENT = 1;
-        NORMAL = 2;
+        URGENT = 0;
+        NORMAL = 1;
     }
 
     repeated group Result = 4 {

@@ -143,7 +143,7 @@ const char descriptor_table_protodef_helloworld_2eproto[] PROTOBUF_SECTION_VARIA
   "oWorld.SubMessage\032%\n\006Result\022\014\n\004name\030\005 \002("
   "\t\022\r\n\005email\030\006 \001(\t\032;\n\nSubMessage\022\016\n\006number"
   "\030\001 \001(\005\022\014\n\004type\030\002 \001(\001\022\017\n\007subtext\030\003 \001(\t\"%\n"
-  "\013MessageType\022\n\n\006URGENT\020\001\022\n\n\006NORMAL\020\002B\014\n\n"
+  "\013MessageType\022\n\n\006URGENT\020\000\022\n\n\006NORMAL\020\001B\014\n\n"
   "test_oneof"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_helloworld_2eproto_deps[1] = {
@@ -170,8 +170,8 @@ const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* HelloWorld_MessageType_descriptor
 }
 bool HelloWorld_MessageType_IsValid(int value) {
   switch (value) {
+    case 0:
     case 1:
-    case 2:
       return true;
     default:
       return false;

@@ -74,8 +74,8 @@ PROTOBUF_NAMESPACE_CLOSE
 namespace tutorial {
 
 enum HelloWorld_MessageType : int {
-  HelloWorld_MessageType_URGENT = 1,
-  HelloWorld_MessageType_NORMAL = 2
+  HelloWorld_MessageType_URGENT = 0,
+  HelloWorld_MessageType_NORMAL = 1
 };
 bool HelloWorld_MessageType_IsValid(int value);
 constexpr HelloWorld_MessageType HelloWorld_MessageType_MessageType_MIN = HelloWorld_MessageType_URGENT;
