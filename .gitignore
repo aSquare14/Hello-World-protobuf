@@ -1,6 +1,7 @@
 # Prerequisites
 *.d
-
+__*__.vscode
+/bazel_*
 # Compiled Object files
 *.slo
 *.lo
