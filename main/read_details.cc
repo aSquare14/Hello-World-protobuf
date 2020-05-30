@@ -15,7 +15,7 @@ void Fun(const tutorial::HelloWorld& hello_world) {
         const tutorial::TextMessage& tm = hello_world.msg(i);
         cout<<"Message ID: "<<tm.id()<<endl;
         cout<<"Message Title: "<<tm.title()<<endl;
-        for(int j = 0; i < tm.dummy_size(); j++)
+        for(int j = 0; j < tm.dummy_size(); j++)
         {
             const tutorial::TextMessage::SubMessage& sm = tm.dummy(j);
             switch (sm.type())
