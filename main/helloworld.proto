@@ -23,7 +23,7 @@ message TextMessage {
 
     message SubMessage {
         optional int32 number = 1;
-        optional double type = 2;
+        optional MessageType type = 2;
         optional string subtext =3;
   }
   repeated SubMessage dummy = 9;

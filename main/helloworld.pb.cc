@@ -118,8 +118,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_helloworld_2eproto::offsets[] 
   PROTOBUF_FIELD_OFFSET(::tutorial::TextMessage_SubMessage, number_),
   PROTOBUF_FIELD_OFFSET(::tutorial::TextMessage_SubMessage, type_),
   PROTOBUF_FIELD_OFFSET(::tutorial::TextMessage_SubMessage, subtext_),
-  2,
   1,
+  2,
   0,
   PROTOBUF_FIELD_OFFSET(::tutorial::TextMessage, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::tutorial::TextMessage, _internal_metadata_),
@@ -163,17 +163,18 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_helloworld_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\020helloworld.proto\022\010tutorial\"\326\002\n\013TextMes"
+  "\n\020helloworld.proto\022\010tutorial\"\371\002\n\013TextMes"
   "sage\022\n\n\002id\030\001 \002(\005\022\020\n\010DoubleId\030\002 \001(\001\022\r\n\005TI"
   "TLE\030\003 \001(\t\022,\n\006result\030\004 \003(\n2\034.tutorial.Tex"
   "tMessage.Result\022\020\n\006test_a\030\007 \001(\tH\000\022\020\n\006tes"
   "t_b\030\010 \001(\001H\000\022/\n\005dummy\030\t \003(\0132 .tutorial.Te"
   "xtMessage.SubMessage\032%\n\006Result\022\014\n\004name\030\005"
-  " \002(\t\022\r\n\005email\030\006 \001(\t\032;\n\nSubMessage\022\016\n\006num"
-  "ber\030\001 \001(\005\022\014\n\004type\030\002 \001(\001\022\017\n\007subtext\030\003 \001(\t"
-  "\"%\n\013MessageType\022\n\n\006URGENT\020\000\022\n\n\006NORMAL\020\001B"
-  "\014\n\ntest_oneof\"0\n\nHelloWorld\022\"\n\003msg\030\001 \003(\013"
-  "2\025.tutorial.TextMessage"
+  " \002(\t\022\r\n\005email\030\006 \001(\t\032^\n\nSubMessage\022\016\n\006num"
+  "ber\030\001 \001(\005\022/\n\004type\030\002 \001(\0162!.tutorial.TextM"
+  "essage.MessageType\022\017\n\007subtext\030\003 \001(\t\"%\n\013M"
+  "essageType\022\n\n\006URGENT\020\000\022\n\n\006NORMAL\020\001B\014\n\nte"
+  "st_oneof\"0\n\nHelloWorld\022\"\n\003msg\030\001 \003(\0132\025.tu"
+  "torial.TextMessage"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_helloworld_2eproto_deps[1] = {
 };
@@ -185,7 +186,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_hel
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_helloworld_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_helloworld_2eproto = {
-  false, false, descriptor_table_protodef_helloworld_2eproto, "helloworld.proto", 423,
+  false, false, descriptor_table_protodef_helloworld_2eproto, "helloworld.proto", 458,
   &descriptor_table_helloworld_2eproto_once, descriptor_table_helloworld_2eproto_sccs, descriptor_table_helloworld_2eproto_deps, 4, 0,
   schemas, file_default_instances, TableStruct_helloworld_2eproto::offsets,
   file_level_metadata_helloworld_2eproto, 4, file_level_enum_descriptors_helloworld_2eproto, file_level_service_descriptors_helloworld_2eproto,
@@ -502,10 +503,10 @@ class TextMessage_SubMessage::_Internal {
  public:
   using HasBits = decltype(std::declval<TextMessage_SubMessage>()._has_bits_);
   static void set_has_number(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
+    (*has_bits)[0] |= 2u;
   }
   static void set_has_type(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
+    (*has_bits)[0] |= 4u;
   }
   static void set_has_subtext(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
@@ -527,18 +528,18 @@ TextMessage_SubMessage::TextMessage_SubMessage(const TextMessage_SubMessage& fro
     subtext_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_subtext(),
       GetArena());
   }
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&number_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(number_));
+  ::memcpy(&number_, &from.number_,
+    static_cast<size_t>(reinterpret_cast<char*>(&type_) -
+    reinterpret_cast<char*>(&number_)) + sizeof(type_));
   // @@protoc_insertion_point(copy_constructor:tutorial.TextMessage.SubMessage)
 }
 
 void TextMessage_SubMessage::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TextMessage_SubMessage_helloworld_2eproto.base);
   subtext_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&number_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(number_));
+  ::memset(&number_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&type_) -
+      reinterpret_cast<char*>(&number_)) + sizeof(type_));
 }
 
 TextMessage_SubMessage::~TextMessage_SubMessage() {
@@ -578,9 +579,9 @@ void TextMessage_SubMessage::Clear() {
     subtext_.ClearNonDefaultToEmpty();
   }
   if (cached_has_bits & 0x00000006u) {
-    ::memset(&type_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&number_) -
-        reinterpret_cast<char*>(&type_)) + sizeof(number_));
+    ::memset(&number_, 0, static_cast<size_t>(
+        reinterpret_cast<char*>(&type_) -
+        reinterpret_cast<char*>(&number_)) + sizeof(type_));
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
@@ -603,12 +604,16 @@ const char* TextMessage_SubMessage::_InternalParse(const char* ptr, ::PROTOBUF_N
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // optional double type = 2;
+      // optional .tutorial.TextMessage.MessageType type = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 17)) {
-          _Internal::set_has_type(&has_bits);
-          type_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<double>(ptr);
-          ptr += sizeof(double);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          if (PROTOBUF_PREDICT_TRUE(::tutorial::TextMessage_MessageType_IsValid(val))) {
+            _internal_set_type(static_cast<::tutorial::TextMessage_MessageType>(val));
+          } else {
+            ::PROTOBUF_NAMESPACE_ID::internal::WriteVarint(2, val, mutable_unknown_fields());
+          }
         } else goto handle_unusual;
         continue;
       // optional string subtext = 3;
@@ -653,15 +658,16 @@ failure:
 
   cached_has_bits = _has_bits_[0];
   // optional int32 number = 1;
-  if (cached_has_bits & 0x00000004u) {
+  if (cached_has_bits & 0x00000002u) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_number(), target);
   }
 
-  // optional double type = 2;
-  if (cached_has_bits & 0x00000002u) {
+  // optional .tutorial.TextMessage.MessageType type = 2;
+  if (cached_has_bits & 0x00000004u) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteDoubleToArray(2, this->_internal_type(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      2, this->_internal_type(), target);
   }
 
   // optional string subtext = 3;
@@ -699,16 +705,17 @@ size_t TextMessage_SubMessage::ByteSizeLong() const {
           this->_internal_subtext());
     }
 
-    // optional double type = 2;
-    if (cached_has_bits & 0x00000002u) {
-      total_size += 1 + 8;
-    }
-
     // optional int32 number = 1;
-    if (cached_has_bits & 0x00000004u) {
+    if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
           this->_internal_number());
+    }
+
+    // optional .tutorial.TextMessage.MessageType type = 2;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
     }
 
   }
@@ -749,10 +756,10 @@ void TextMessage_SubMessage::MergeFrom(const TextMessage_SubMessage& from) {
       _internal_set_subtext(from._internal_subtext());
     }
     if (cached_has_bits & 0x00000002u) {
-      type_ = from.type_;
+      number_ = from.number_;
     }
     if (cached_has_bits & 0x00000004u) {
-      number_ = from.number_;
+      type_ = from.type_;
     }
     _has_bits_[0] |= cached_has_bits;
   }
@@ -782,11 +789,11 @@ void TextMessage_SubMessage::InternalSwap(TextMessage_SubMessage* other) {
   swap(_has_bits_[0], other->_has_bits_[0]);
   subtext_.Swap(&other->subtext_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(TextMessage_SubMessage, number_)
-      + sizeof(TextMessage_SubMessage::number_)
-      - PROTOBUF_FIELD_OFFSET(TextMessage_SubMessage, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      PROTOBUF_FIELD_OFFSET(TextMessage_SubMessage, type_)
+      + sizeof(TextMessage_SubMessage::type_)
+      - PROTOBUF_FIELD_OFFSET(TextMessage_SubMessage, number_)>(
+          reinterpret_cast<char*>(&number_),
+          reinterpret_cast<char*>(&other->number_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TextMessage_SubMessage::GetMetadata() const {

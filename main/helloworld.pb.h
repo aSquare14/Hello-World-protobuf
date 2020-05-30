@@ -419,8 +419,8 @@ class TextMessage_SubMessage PROTOBUF_FINAL :
 
   enum : int {
     kSubtextFieldNumber = 3,
-    kTypeFieldNumber = 2,
     kNumberFieldNumber = 1,
+    kTypeFieldNumber = 2,
   };
   // optional string subtext = 3;
   bool has_subtext() const;
@@ -451,19 +451,6 @@ class TextMessage_SubMessage PROTOBUF_FINAL :
   std::string* _internal_mutable_subtext();
   public:
 
-  // optional double type = 2;
-  bool has_type() const;
-  private:
-  bool _internal_has_type() const;
-  public:
-  void clear_type();
-  double type() const;
-  void set_type(double value);
-  private:
-  double _internal_type() const;
-  void _internal_set_type(double value);
-  public:
-
   // optional int32 number = 1;
   bool has_number() const;
   private:
@@ -477,6 +464,19 @@ class TextMessage_SubMessage PROTOBUF_FINAL :
   void _internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
+  // optional .tutorial.TextMessage.MessageType type = 2;
+  bool has_type() const;
+  private:
+  bool _internal_has_type() const;
+  public:
+  void clear_type();
+  ::tutorial::TextMessage_MessageType type() const;
+  void set_type(::tutorial::TextMessage_MessageType value);
+  private:
+  ::tutorial::TextMessage_MessageType _internal_type() const;
+  void _internal_set_type(::tutorial::TextMessage_MessageType value);
+  public:
+
   // @@protoc_insertion_point(class_scope:tutorial.TextMessage.SubMessage)
  private:
   class _Internal;
@@ -487,8 +487,8 @@ class TextMessage_SubMessage PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr subtext_;
-  double type_;
   ::PROTOBUF_NAMESPACE_ID::int32 number_;
+  int type_;
   friend struct ::TableStruct_helloworld_2eproto;
 };
 // -------------------------------------------------------------------
@@ -1179,7 +1179,7 @@ inline void TextMessage_Result::unsafe_arena_set_allocated_email(
 
 // optional int32 number = 1;
 inline bool TextMessage_SubMessage::_internal_has_number() const {
-  bool value = (_has_bits_[0] & 0x00000004u) != 0;
+  bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
 inline bool TextMessage_SubMessage::has_number() const {
@@ -1187,7 +1187,7 @@ inline bool TextMessage_SubMessage::has_number() const {
 }
 inline void TextMessage_SubMessage::clear_number() {
   number_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
+  _has_bits_[0] &= ~0x00000002u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage_SubMessage::_internal_number() const {
   return number_;
@@ -1197,7 +1197,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 TextMessage_SubMessage::number() const {
   return _internal_number();
 }
 inline void TextMessage_SubMessage::_internal_set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
+  _has_bits_[0] |= 0x00000002u;
   number_ = value;
 }
 inline void TextMessage_SubMessage::set_number(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -1205,9 +1205,9 @@ inline void TextMessage_SubMessage::set_number(::PROTOBUF_NAMESPACE_ID::int32 va
   // @@protoc_insertion_point(field_set:tutorial.TextMessage.SubMessage.number)
 }
 
-// optional double type = 2;
+// optional .tutorial.TextMessage.MessageType type = 2;
 inline bool TextMessage_SubMessage::_internal_has_type() const {
-  bool value = (_has_bits_[0] & 0x00000002u) != 0;
+  bool value = (_has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
 inline bool TextMessage_SubMessage::has_type() const {
@@ -1215,20 +1215,21 @@ inline bool TextMessage_SubMessage::has_type() const {
 }
 inline void TextMessage_SubMessage::clear_type() {
   type_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
+  _has_bits_[0] &= ~0x00000004u;
 }
-inline double TextMessage_SubMessage::_internal_type() const {
-  return type_;
+inline ::tutorial::TextMessage_MessageType TextMessage_SubMessage::_internal_type() const {
+  return static_cast< ::tutorial::TextMessage_MessageType >(type_);
 }
-inline double TextMessage_SubMessage::type() const {
+inline ::tutorial::TextMessage_MessageType TextMessage_SubMessage::type() const {
   // @@protoc_insertion_point(field_get:tutorial.TextMessage.SubMessage.type)
   return _internal_type();
 }
-inline void TextMessage_SubMessage::_internal_set_type(double value) {
-  _has_bits_[0] |= 0x00000002u;
+inline void TextMessage_SubMessage::_internal_set_type(::tutorial::TextMessage_MessageType value) {
+  assert(::tutorial::TextMessage_MessageType_IsValid(value));
+  _has_bits_[0] |= 0x00000004u;
   type_ = value;
 }
-inline void TextMessage_SubMessage::set_type(double value) {
+inline void TextMessage_SubMessage::set_type(::tutorial::TextMessage_MessageType value) {
   _internal_set_type(value);
   // @@protoc_insertion_point(field_set:tutorial.TextMessage.SubMessage.type)
 }
