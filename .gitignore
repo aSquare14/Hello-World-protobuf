@@ -1,7 +1,11 @@
 # Prerequisites
 *.d
 __*__.vscode
-/bazel_*
+bazel-Hello-World-protobuf
+bazel-bin
+bazel-out
+bazel-testlogs
+
 # Compiled Object files
 *.slo
 *.lo
